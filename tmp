@@ -1,0 +1,30 @@
+const crowd = [
+    {
+      name : "Anne Onymous",
+      username : "Anonymous",
+      message : "This is an example of a simple question without media.",
+      subject : "Personal Informations",
+      icon : "images/Sabrina.jpeg"
+    },
+    iziram("Personal Informations","This is an example of a simple answer without media"),
+    {
+      name : "John Doe",
+      username : "DoeNUTS",
+      message : "This is an example of a question with a media : Picture.",
+      media : function() {generateModalImg('images/cristof.jpeg')},
+      subject : "Personal Informations",
+      icon : "images/cristof.jpeg"
+    },
+    iziram("Personal Informations","this is an example of an answer with a media : Text", function() {generateModalText("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non felis enim. Donec metus sapien, aliquam eu ullamcorper hendrerit, posuere non ante. Vivamus efficitur, sem quis venenatis suscipit, dui velit tincidunt lacus, quis dignissim odio leo sed dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi vulputate vestibulum ultrices. Praesent convallis, elit vel finibus venenatis, purus sapien condimentum justo, nec varius metus nibh et mauris. Morbi pretium arcu purus, in dictum neque malesuada et. In a ultricies nulla. Nunc tristique pharetra magna nec facilisis. Ut aliquam tortor ac laoreet aliquet. Morbi lobortis iaculis purus. Ut ac metus venenatis, rhoncus quam nec, blandit dolor. Praesent volutpat pellentesque molestie. ")}),
+    {
+      name : "Hyser Anybody",
+      username : "WhereIsWaldo19",
+      message : "This is an example of a question with a media : Video.",
+      media : function() {generateModalVideo('images/video_placeholder.mp4')},
+      subject : "Personal Informations",
+      icon : "images/taï.jpeg"
+    },
+    iziram("Personal Informations","this is an example of an answer with a media : Complex media", function() {generateModal(complex)})
+    
+    
+  ];

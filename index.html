@@ -6,35 +6,27 @@
     <title>Matthias' Blog</title>
     <link
     rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
   </head>
-  <body>
-    
-    <div id="Head Banner" class="container is-fluid">
-      <div class = "box is-info has-text-centered has-background-info">
-        <div class="is-fluid">
-  
-          <h1 class ="title has-text-info-light is-size-1 is-family-code">
-            Matthias Hartmann
-          </h1>
-          <h2 class = "subtitle has-text-info-light is-size-3"> 
-            Answers his fans' questions !
-          </h2>
-        </div>
+  <body class="bg-dark">
+    <div class="hero bg-dark hero-sm">
+      <div class="hero-body">
+        <h1 class="text-center text-bold">Matthias Hartmann</h1>
+        <h4 class="text-center">Answers his fans' questions</h4>
       </div>
     </div>
-</div>
-    <div class="tabs is-large is-centered">
-      <ul>
-        <li class="is-active" id="0"><a onclick="displayComments('Personal Informations','0')">Personal Informations</a></li>
-        <li id = "1"><a onclick="displayComments('Studies','1')">Studies</a></li>
-        <li id = "3"><a onclick="displayComments('Skills','3')">Skills</a></li>
-        <li id="2"><a onclick="displayComments('Hobbies','2')">Hobbies</a></li>
-        
-      </ul>
-    </div>
-    <div id="Media Playground" class = "container is-fluid mt-6">
-        
+    
+    <ul class="tab tab-block">
+      <li class="tab-item active" id="0"><a onclick="displayComments('Personal Informations','0')">Personal Informations</a></li>
+      <li id = "1" class="tab-item"><a onclick="displayComments('Studies','1')">Studies</a></li>
+      <li id = "3" class="tab-item"><a onclick="displayComments('Skills','3')">Skills</a></li>
+      <li id="2" class="tab-item"><a onclick="displayComments('Hobbies','2')">Hobbies</a></li>
+      
+    </ul>
+    <div id="Media Playground" class = "container">
+
     </div>
     
     <script src="lib/main.js"></script>
