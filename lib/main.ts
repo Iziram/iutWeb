@@ -1,6 +1,8 @@
+import {Crowd, Querie} from './types';
 'use strict';
-function generateMediaQA(userInfos,mediaText, avatarIcon, modal, mobile){
+function generateMediaQA(userInfos : string[], mediaText : string, avatarIcon : string, mobile : boolean, modal ? : HTMLElement){
   var media = null
+  console.log(mobile)
   if(!mobile){
     media = document.createElement('div')
     media.className="mx-2 my-2 bg-secondary text-dark text-center"
@@ -131,7 +133,7 @@ function generateMediaQA(userInfos,mediaText, avatarIcon, modal, mobile){
         
 }
 
-function appendAnwser(mediaQuery, mediaAnswer){
+function appendAnwser(mediaQuery : HTMLElement, mediaAnswer : HTMLElement){
   const div = document.createElement('div')
     div.appendChild(mediaQuery.cloneNode(true))
     div.appendChild(mediaAnswer)
@@ -141,12 +143,12 @@ function appendAnwser(mediaQuery, mediaAnswer){
   mediaQuery.getElementsByClassName("answer")[0].appendChild(answer)
 }
 
-function generateAllMediaQueries(array, observer, mobile){
+function generateAllMediaQueries(array : Querie[], observer : IntersectionObserver, mobile : boolean){
   var medias = []
   var answers = []
   for(var i  = 0; i< array.length; i++){
     const obj = array[i];
-    const mediaObject = generateMediaQA(obj.userInfos, obj.mediaText, obj.avatarIcon, obj.modal, mobile)
+    const mediaObject = generateMediaQA(obj.userInfos, obj.mediaText, obj.avatarIcon, mobile, obj.modal)
     if(obj.mediaAnswer != null){
       answers.push([i,obj.mediaAnswer])
       mediaObject.classList.add("media-answer")
@@ -174,15 +176,15 @@ function generateAllMediaQueries(array, observer, mobile){
 
 }
 
-function generateBox(obj){
+function generateBox(id : string){
   //title 
   var title = document.createElement("h1")
   title.classList.add("text-center")
-  title.innerHTML = obj
+  title.innerHTML = id
   //box
   var box = document.createElement("div")
   box.classList.add("box", "has-background-info", "holder","animate__animated","animate__fadeIn","animate__slow")
-  box.id = obj
+  box.id = id
   //placing in media playground
   const doc = document.getElementById("Media Playground")
   doc.innerHTML = ''
@@ -190,9 +192,9 @@ function generateBox(obj){
   doc.appendChild(box)
 }
 
-function generateComments(crowd){
-  var array = []
-  const currentBox = document.getElementsByClassName("holder")[0].id
+function generateComments(crowd : Crowd[]){
+  var array : Querie[]= [] 
+  const currentBox = document.getElementsByClassName("holder")[0].id as string
   crowd.forEach(people =>{
       if (currentBox == people.subject){
         var button = null;
@@ -204,7 +206,7 @@ function generateComments(crowd){
           modal: button,
           parent: people.parent,
           mediaAnswer: people.answer
-        }
+        } as Querie
         array.push(obj)
       }
       
@@ -212,19 +214,15 @@ function generateComments(crowd){
   return array
 }
 
-function generateModalImg(image, title){
+function generateModalImg(image : string, title ?: string){
   var img = document.createElement("img")
   img.className = "img-responsive img-fit-cover text-center"
   img.src =image
-  img.style = `
-  height: 75%;
-  width: 50vw;
-  `
 
   generateModal(img, title)
 }
 
-function generateModalText(text,title){
+function generateModalText(text : string, title ?: string ){
   var box = document.createElement('div')
   box.classList.add("box")
 
@@ -236,7 +234,7 @@ function generateModalText(text,title){
   generateModal(box,title)
 }
 
-function generateModalVideo(vid,title){
+function generateModalVideo(vid : string, title ?: string){
   var video = document.createElement('video')
   video.className = "video-responsive"
   video.src = vid
@@ -245,7 +243,7 @@ function generateModalVideo(vid,title){
   generateModal(video,title)
 }
 
-function generateModal(innerContent, modalTitle = "Modal Title"){
+function generateModal(innerContent : HTMLElement, modalTitle : string = "Modal Title"){
   const modal = document.createElement('div')
     modal.className = "modal active modal-lg"
 
@@ -293,7 +291,7 @@ function generateModal(innerContent, modalTitle = "Modal Title"){
   document.getElementById("Media Playground").appendChild(modal)
 }
 
-function modalButtonGenerator(func, text="Click to open the media"){
+function modalButtonGenerator(func : any, text : string ="Click to open the media") : HTMLButtonElement{
   var button = document.createElement('button')
   button.innerHTML = text
   button.classList.add("btn","s-rounded","my-2")
@@ -307,126 +305,32 @@ function closeModal(){
   classes[classes.length-1].remove()
 }
 
-function iziram(subject, message, media = null){
+function iziram(subject : string, message : string, media : null | Function = null): Crowd{
   var obj = {
     name : "Matthias Hartmann",
     username : "Iziram",
     message : message,
     subject : subject,
     icon : "images/logo.svg"
-  }
+  } as Crowd
+
   if(media) {
     obj.media = media;
   }
   return obj
 }
 
-function displayComments(subject, id){
+export function displayComments(subject : string , id : string){
   const mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
   
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting){
-          entry.target.classList.add("animate__animated","animate__fadeInDown")
+          entry.target.classList.add("animate__animated","animate__fadeInUp")
       }
     })
   })
   
-  const complex = document.createElement('div')
-  complex.classList.add("box")
-  complex.innerHTML = `
-  <div class='content'>
-  <h1>Hello World</h1>
-  <p>Lorem ipsum<sup><a>[1]</a></sup> dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque. Sub<sub>script</sub> works as well!</p>
-  <h2>Second level</h2>
-  <p>Curabitur accumsan turpis pharetra <strong>augue tincidunt</strong> blandit. Quisque condimentum maximus mi, sit amet commodo arcu rutrum id. Proin pretium urna vel cursus venenatis. Suspendisse potenti. Etiam mattis sem rhoncus lacus dapibus facilisis. Donec at dignissim dui. Ut et neque nisl.</p>
-  <ul>
-    <li>In fermentum leo eu lectus mollis, quis dictum mi aliquet.</li>
-    <li>Morbi eu nulla lobortis, lobortis est in, fringilla felis.</li>
-    <li>Aliquam nec felis in sapien venenatis viverra fermentum nec lectus.</li>
-    <li>Ut non enim metus.</li>
-  </ul>
-  <h3>Third level</h3>
-  <p>Quisque ante lacus, malesuada ac auctor vitae, congue <a href='#'>non ante</a>. Phasellus lacus ex, semper ac tortor nec, fringilla condimentum orci. Fusce eu rutrum tellus.</p>
-  <ol>
-    <li>Donec blandit a lorem id convallis.</li>
-    <li>Cras gravida arcu at diam gravida gravida.</li>
-    <li>Integer in volutpat libero.</li>
-    <li>Donec a diam tellus.</li>
-    <li>Aenean nec tortor orci.</li>
-    <li>Quisque aliquam cursus urna, non bibendum massa viverra eget.</li>
-    <li>Vivamus maximus ultricies pulvinar.</li>
-  </ol>
-  <blockquote>Ut venenatis, nisl scelerisque sollicitudin fermentum, quam libero hendrerit ipsum, ut blandit est tellus sit amet turpis.</blockquote>
-  <p>Quisque at semper enim, eu hendrerit odio. Etiam auctor nisl et <em>justo sodales</em> elementum. Maecenas ultrices lacus quis neque consectetur, et lobortis nisi molestie.</p>
-  <p>Sed sagittis enim ac tortor maximus rutrum. Nulla facilisi. Donec mattis vulputate risus in luctus. Maecenas vestibulum interdum commodo.</p>
-  <dl>
-    <dt>Web</dt>
-    <dd>The part of the Internet that contains websites and web pages</dd>
-    <dt>HTML</dt>
-    <dd>A markup language for creating web pages</dd>
-    <dt>CSS</dt>
-    <dd>A technology to make HTML look better</dd>
-  </dl>
-  <p>Suspendisse egestas sapien non felis placerat elementum. Morbi tortor nisl, suscipit sed mi sit amet, mollis malesuada nulla. Nulla facilisi. Nullam ac erat ante.</p>
-  <h4>Fourth level</h4>
-  <p>Nulla efficitur eleifend nisi, sit amet bibendum sapien fringilla ac. Mauris euismod metus a tellus laoreet, at elementum ex efficitur.</p>
-  <pre>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;Hello World&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra nec nulla vitae mollis.&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</pre>
-  <p>Maecenas eleifend sollicitudin dui, faucibus sollicitudin augue cursus non. Ut finibus eleifend arcu ut vehicula. Mauris eu est maximus est porta condimentum in eu justo. Nulla id iaculis sapien.</p>
-  <table>
-    <thead>
-      <tr>
-        <th>One</th>
-        <th>Two</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Three</td>
-        <td>Four</td>
-      </tr>
-      <tr>
-        <td>Five</td>
-        <td>Six</td>
-      </tr>
-      <tr>
-        <td>Seven</td>
-        <td>Eight</td>
-      </tr>
-      <tr>
-        <td>Nine</td>
-        <td>Ten</td>
-      </tr>
-      <tr>
-        <td>Eleven</td>
-        <td>Twelve</td>
-      </tr>
-    </tbody>
-  </table>
-  <p>Phasellus porttitor enim id metus volutpat ultricies. Ut nisi nunc, blandit sed dapibus at, vestibulum in felis. Etiam iaculis lorem ac nibh bibendum rhoncus. Nam interdum efficitur ligula sit amet ullamcorper. Etiam tristique, leo vitae porta faucibus, mi lacus laoreet metus, at cursus leo est vel tellus. Sed ac posuere est. Nunc ultricies nunc neque, vitae ultricies ex sodales quis. Aliquam eu nibh in libero accumsan pulvinar. Nullam nec nisl placerat, pretium metus vel, euismod ipsum. Proin tempor cursus nisl vel condimentum. Nam pharetra varius metus non pellentesque.</p>
-  <h5>Fifth level</h5>
-  <p>Aliquam sagittis rhoncus vulputate. Cras non luctus sem, sed tincidunt ligula. Vestibulum at nunc elit. Praesent aliquet ligula mi, in luctus elit volutpat porta. Phasellus molestie diam vel nisi sodales, a eleifend augue laoreet. Sed nec eleifend justo. Nam et sollicitudin odio.</p>
-  <figure>
-    <img src='https://bulma.io/images/placeholders/256x256.png'>
-    <img src='https://bulma.io/images/placeholders/256x256.png'>
-    <figcaption>
-      Figure 1: Some beautiful placeholders
-    </figcaption>
-  </figure>
-  <h6>Sixth level</h6>
-  <p>Cras in nibh lacinia, venenatis nisi et, auctor urna. Donec pulvinar lacus sed diam dignissim, ut eleifend eros accumsan. Phasellus non tortor eros. Ut sed rutrum lacus. Etiam purus nunc, scelerisque quis enim vitae, malesuada ultrices turpis. Nunc vitae maximus purus, nec consectetur dui. Suspendisse euismod, elit vel rutrum commodo, ipsum tortor maximus dui, sed varius sapien odio vitae est. Etiam at cursus metus.</p>
-</div>`;
-
   const crowd = [
     {
       name : "Anne Onymous",
@@ -453,8 +357,7 @@ function displayComments(subject, id){
       subject : "Personal Informations",
       icon : "images/Taï.jpeg",
       answer: 0
-    },
-    iziram("Personal Informations","this is an example of an answer with a media : Complex media", function() {generateModal(complex)})
+    }
   ];
   generateBox(subject)
   const array = generateComments(crowd)
@@ -469,4 +372,4 @@ function displayComments(subject, id){
 
 }
 
-displayComments("Personal Informations",0)
+displayComments("Personal Informations","0")
