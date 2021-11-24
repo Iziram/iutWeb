@@ -1,15 +1,21 @@
 .sprite{
     width: 10vw;
-    height: 20vw;
+    height: 20vh;
 }
 
 #presenter{
-    width: 15vw;
-    height: 25vw;
+    position: relative;
+    top: 5.2vw;
+    left: 5vw;
+    width: 20vw;
+    height: 30vh;
 }
 
-.textSize{
+.textSize-3{
     font-size: 3vh;
+}
+.textSize-2{
+    font-size: 2.5vh;
 }
 
 .walk{
@@ -17,39 +23,28 @@
     animation-duration: 1s;
 }
 
-.margins{
-    position: fixed;
-    bottom : -15%;
-    left: 15%;
-    right: 23%;
-    border: solid;
+.answer{
+    padding: 1% 1%;
+    position: absolute;
+    text-align: center;
+    color: black;
+    top: 15%;
+    left: 25%;
+    width: 45vw;
+    height: 26vh;
+    background-color: whitesmoke;
+    border-radius: 1vw;
+    box-shadow: 0.3vw 0.4vw rgba(156, 156, 156, 80);
 }
 
-.bubble {
-    position: relative;
-    font-family: sans-serif;
-    font-size: 18px;
-    line-height: 24px;
-    width: 300px;
-    background: #fff;
-    border-radius: 40px;
-    padding: 24px;
-    text-align: center;
-    color: #000;
-  }
-  
-  .bubble-bottom-left:before {
-    content: "";
-    width: 0px;
-    height: 0px;
-    position: absolute;
-    border-left: 24px solid #fff;
-    border-right: 12px solid transparent;
-    border-top: 12px solid #fff;
-    border-bottom: 20px solid transparent;
-    left: 32px;
-    bottom: -24px;
-  }
+
+
+.margins{
+    position: fixed;
+    bottom: -5%;
+    left: 15%;
+    right: 23%;
+}
 
 @keyframes walk {
     from{
@@ -65,7 +60,6 @@ details{
     float: right;
     margin-right: 2vw;
     color: black;
-    border: solid;
     width: 15vw;
     cursor: pointer;
 }
@@ -99,7 +93,7 @@ details > summary > img{
 details[open] ul{
     text-align: center;
     animation-name: fadeIn;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
     animation-timing-function: ease-in;
 }
 
