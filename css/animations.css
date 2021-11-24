@@ -5,3 +5,11 @@
 .translation:hover{
     transform: translate(0px, 100%);
 }
+
+.hidden{
+    visibility: hidden;
+}
+
+.topic{
+    text-decoration: underline;
+}

@@ -11,7 +11,26 @@
 <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
 <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
   </head>
-  
+  <header>
+    <nav>
+      <button onclick="nextTopic(-1)">&lt;</button>
+      <ul>
+        <li id="1" class="topic">
+            Personal Informations
+        </li>
+        <li id="2" class ="hidden">
+            Studies
+        </li>
+        <li id="3"class ="hidden">
+            Skills
+        </li>
+        <li id="4" class ="hidden">
+            Hobbies
+        </li>
+      </ul>
+      <button onclick="nextTopic()">&gt;</button>
+    </nav>
+  </header>
   <body class="bg-dark p-centered">
     <span id="playground" class="text-dark text-center p-centered">
     </span>
