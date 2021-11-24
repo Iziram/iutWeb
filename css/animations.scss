@@ -7,6 +7,29 @@
     font-size: 3vh;
 }
 
+.walk{
+    animation-name: walk;
+    animation-duration: 1s;
+}
+
+.margins{
+    position: fixed;
+    top : 25%;
+    left: 15%;
+    right: 23%;
+    border: solid;
+}
+
+@keyframes walk {
+    from{
+        transform: translateX(-2000px);
+    }
+    to{
+        visibility: visible;
+        transform: translateX(0px);
+    }
+}
+
 details{
     float: right;
     margin-right: 2vw;
@@ -74,14 +97,4 @@ details > summary {
 #postit{
     width: 80%;
     height: 80%;
-}
-
-@keyframes fadeIn {
-    from {
-        visibility: 0%;
-    }
-
-    to{
-        visibility: 100%;
-    }
 }
