@@ -1,0 +1,68 @@
+Questions and Answers : 
+
+Personnal Informations : 
+
+	- What is your name ? 
+	- As it is obviously stated in the title of this QA, My name is Matthias HARTMANN.
+	
+	- Where are you from ?
+	- I was born in France, in a town named Brest, near the atlantic ocean in Brittanny
+	
+	- Where do you  live ?
+	- I lived my past years in a little town next to Brest, however, because of my studies I now live in Lannion.
+	
+	- Do you have any brother or sisters ?
+	- I do have 2 older brothers, respectively named Dorian (the oldest, he's 22) and Cyril (he's 20)
+	
+	- How old are you ?
+	- It might surprise you but my brothers and I share were born following a arithmetical sequence with a commmon difference of 2. It is a scientific way to say that I'm 18
+	
+	- Do you have any pets ?
+	- Yeah, I have a cat named pixel, I love her, and on her side, she love when I feed her. So mutual love I guess.
+
+Studie :
+
+	- What is you school curriculum ?
+	- Well, Last year (2020) I got my baccalaureate (my specialities were Mathematics and computer science), an equivalent in UK would be the A level.
+	
+	- Are you following any university course ?
+	- I pursue a Network and Telecommunications' degree in the Univeristy Institute of Technology of Lannion.
+	
+	- Do you have any diploma ?
+	- Other than the baccalaureate, I have the FCE (Cambridge English: First) and a fencing activity leader that allows me to teach fencing.
+	
+	- Where do you see you in 5 years ?
+	- I don't plan that far away in the futur but if things go well I should be studing my last year of engineering school to get a master's degree.
+	
+	- What do you want to do for a living ? 
+	- I've always wanted to work in the Computer Science domain, now for the specific job I want to do my mind is still blurry. I love a lot of things and for now can't find a way of choosing which is better.
+	
+
+Skills :
+
+	- Are you able to work with people or do you prefer to do everything by yourself ?
+	- I tend to do everything by myself when the people that are working with me aren't doing what they have to fast enough. However I'll still try to help them to learn faster ways to do their work so next time I don't have to do everything. 
+	
+	- Can you describe what computer science's skills you have ?
+	- Because i'm fond of IT, I always want to learn new things and skills related to projects I make. For example, I recently learnt how to use the VSCode Extension API written in Typescript to create my own extension to generate Doxygen Docstring (description of functions and variables in a program) in python file. Last year I wanted to mod Minecraft, a game made in Java so I spend most of my free time studying and learning Java.
+	
+	- What projects have you done recently ?
+	- As stated in the previous Question's anwser, I made a VSCode extension, I also created multiple plugins (modifications of the server side) for Minecraft, all written in Java, I did some web developping such as this website. In general you can see what projects I have done on my github : https://github.com/Iziram
+	
+
+Hobbies :
+
+	- Do you play video games ?
+	- Yeah, I do play, most of the time I play Minecraft or Brawlhalla but I have a whole galery of very different games that I could play.
+	
+	- Do you practice any sport ?
+	- I'm quite sporty actually. I tried a lot of different sports (basket ball, swimming, archery...) but I've settled on fencing since 2013. 
+	
+	- Do you watch any series ?
+	- I'm not a big serie watcher but I watched some and my favourite one is Mr.Robot.
+	
+	- Have you ever watched an anime ?
+	- Actually I do prefer anime compared to series so the anwser is a big Yes. I watch anime almost every night. My favourite ones are Code Geass, Your Name and I want to eat your pancreas (the last title might be a bit confusing but the anime tells a beautiful story)
+	
+	- Do you have any other hobbie that you want to share ?
+	- Well, one of my biggest hobbie is developping. I love programming. I always try to find new projects to experiment new programming languages or new way of using the ones that I know. My VSCode extension is a great example of this. I had time and didn't know what to do, so i looked at my programming course and found that it was taking me a long time to generate all the necessary Docstring. So I took my patience and my courage and learnt the VSCode extension API (to a certain level).
