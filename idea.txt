@@ -1,0 +1,7 @@
+Conférence de presse : 
+    Il y a au max 6 reporter avec chacun leur question
+    Chaque question est visible en plaçant sa souris sur le reporter
+    Lorsqu'une question est affichée, la réponse est affichée sur le piedestal en bas de page
+    On peut changer le topic à l'aide d'un selectionneur en haut à droite
+    Lorsqu'on change le topic, il y a une animation où les reporter sont yeet
+    Les sprites des reporters sont généré aléatoirements.
