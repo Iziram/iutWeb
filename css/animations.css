@@ -5,9 +5,3 @@
 .translation:hover{
     transform: translate(0px, 100%);
 }
-
-
-.disappear:hover{
-    transition: linear 1s;
-    visibility: hidden;
-}
