@@ -8,30 +8,21 @@
     <link
     rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
-<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
-<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
   </head>
-  <header>
-    <nav>
-      <button onclick="nextTopic(-1)">&lt;</button>
-      <ul>
-        <li id="1" class="topic">
-            Personal Informations
-        </li>
-        <li id="2" class ="hidden">
-            Studies
-        </li>
-        <li id="3"class ="hidden">
-            Skills
-        </li>
-        <li id="4" class ="hidden">
-            Hobbies
-        </li>
-      </ul>
-      <button onclick="nextTopic()">&gt;</button>
-    </nav>
-  </header>
+  
   <body class="bg-dark p-centered">
+      <details >
+        <summary><img id="postit" src ="images/svg/post-it-svgrepo-com.svg" /></summary>
+        <ul class="topicElementsList textSize">
+          <li id="0" class="topicElements">Personal Informations</li>
+          <li id="1" class="topicElements">Studies</li>
+          <li id="2" class="topicElements">Skills</li>
+          <li id="3" class="topicElements">Hobbies</li>
+        </ul>
+      </details>
+
     <span id="playground" class="text-dark text-center p-centered">
     </span>
     <script src="lib/puppet.js"></script>

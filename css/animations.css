@@ -1,15 +1,87 @@
-.translation{
-    transition: all 0.5s ease-in-out;
+.sprite{
+    width: 10vw;
+    height: 20vw;
 }
 
-.translation:hover{
-    transform: translate(0px, 100%);
+.textSize{
+    font-size: 3vh;
 }
 
-.hidden{
-    visibility: hidden;
+details{
+    float: right;
+    margin-right: 2vw;
+    color: black;
+    border: solid;
+    width: 15vw;
+    cursor: pointer;
 }
 
-.topic{
-    text-decoration: underline;
+details > summary > img:hover{
+    animation-name: pulse;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+
+@keyframes pulse {
+    0% {
+     -webkit-transform:scaleX(1);
+     transform:scaleX(1)
+    }
+    50% {
+     -webkit-transform:scale3d(1.05,1.05,1.05);
+     transform:scale3d(1.05,1.05,1.05)
+    }
+    to {
+     -webkit-transform:scaleX(1);
+     transform:scaleX(1)
+    }
+   }
+
+details > summary > img{
+    margin-left: 15%;
+    margin-top: 10%;
+}
+
+details[open] ul{
+    text-align: center;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+}
+
+.topicElementsList{
+    background-color: #62718a;
+    list-style: none;
+    border-radius: 5px;
+
+    
+}
+.topicElements:hover{
+    border-radius: 10px;
+    background-color: #465061;
+}
+
+details > summary {
+    list-style: none;
+}
+
+.fadeIn{
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+}
+
+#postit{
+    width: 80%;
+    height: 80%;
+}
+
+@keyframes fadeIn {
+    from {
+        visibility: 0%;
+    }
+
+    to{
+        visibility: 100%;
+    }
 }
