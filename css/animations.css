@@ -28,7 +28,7 @@
 }
 
 .bubble{
-    background:#fff;
+    background: white;
     border-radius: 1vw;
     display:-ms-flexbox;
     display:flex;
@@ -36,6 +36,10 @@
     flex-direction:column;
     margin-bottom: 2vh;
     text-decoration: none;
+}
+
+.devil{
+    background: red; 
 }
 .answer{
     padding: 1% 1%;
@@ -129,6 +133,11 @@ details[open] ul{
 
 details > summary {
     list-style: none;
+}
+
+.fadeIn{
+    animation-name: fadeIn;
+    animation-duration: 1s;
 }
 
 #postit{
