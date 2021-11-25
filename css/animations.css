@@ -131,26 +131,46 @@ details > summary {
     list-style: none;
 }
 
-.fadeIn{
-    animation-name: fadeIn;
-    animation-duration: 1s;
-    animation-timing-function: ease-in;
-}
-
 #postit{
     width: 80%;
     height: 80%;
 }
 
-.hidden{
-    animation-name: fadeOut;
-    animation-duration: 0.5s;
+
+#alien{
+    position: absolute;
+    top : 0%;
+    left : 25%;
+    width: 40vw;
+    height: 40vw;
+    z-index: 100;
+}
+.hid{
+    visibility: hidden;
 }
 
-#start{
+.start{
     position: absolute;
     z-index: 100;
-    width: 100%;
+    width: 50%;
     height: 100%;
     background-color: #465061;
 }
+
+.start-text{
+    position: absolute;
+    top: 35vh;
+    left: 25vw;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 20vh;
+    z-index: 101;
+}
+
+.start-left{
+    left: 0px;
+}
+.start-right{
+    right: 0px;
+}
+
