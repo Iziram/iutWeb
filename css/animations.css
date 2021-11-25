@@ -15,7 +15,11 @@
     font-size: 3vh;
 }
 .textSize-2{
-    font-size: 2.5vh;
+    font-size: 2.3vh;
+}
+
+.borderPop{
+    border-radius: 50px;
 }
 
 .walk{
@@ -23,6 +27,16 @@
     animation-duration: 1s;
 }
 
+.bubble{
+    background:#fff;
+    border-radius: 1vw;
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-direction:column;
+    flex-direction:column;
+    margin-bottom: 2vh;
+    text-decoration: none;
+}
 .answer{
     padding: 1% 1%;
     position: absolute;
