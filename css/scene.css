@@ -10,6 +10,7 @@
     position: absolute;
     bottom: 1vh;
     right: 5vw;
+    cursor: pointer;
 }
 
 #presenter{
