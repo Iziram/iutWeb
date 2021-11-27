@@ -154,6 +154,14 @@ details > summary {
     height: 40vw;
     z-index: 100;
 }
+#satan{
+    position: absolute;
+    top : 10vh;
+    left : 30vw;
+    width: 40vw;
+    height: 40vw;
+    z-index: 100;
+}
 .hid{
     visibility: hidden;
 }
@@ -169,10 +177,11 @@ details > summary {
 .start-text{
     position: absolute;
     top: 35vh;
-    left: 25vw;
+    left: 15vw;
+    right: 15vw;
     text-align: center;
     color: whitesmoke;
-    font-size: 20vh;
+    font-size: 10vw;
     z-index: 101;
 }
 
