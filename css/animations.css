@@ -1,14 +1,66 @@
 .sprite{
     width: 13vw;
     height: 23vh;
+    cursor: url(question.cur), pointer;
+}
+
+#source{
+    color: whitesmoke;
+    font-size: 4em;
+    position: absolute;
+    bottom: 1vh;
+    right: 5vw;
 }
 
 #presenter{
     position: relative;
-    top: 5.2vw;
+    top: 9.8vh;
     left: 5vw;
     width: 20vw;
     height: 30vh;
+}
+
+#postit{
+    position: absolute;
+    top: 14vh;
+    right: 5.2vw;
+    width: 20vw;
+    height: 30vh;
+    cursor: pointer;
+}
+
+#postit:hover{
+    animation-name: buttonTopic;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+#label{
+    font-size: 3.5vh;
+}
+
+@keyframes buttonTopic {
+    from{
+        transform: scale(100%);
+    }
+    to{
+        transform: scale(110%);
+    }
+}
+
+.topic{
+    text-align: center;
+    position: absolute;
+    color : #303742;
+    left: 34.5vw;
+    top:45vh;
+    background-color : whitesmoke;
+    border-radius: 2em;
+    height: 10vh;
+    width: 25vw;
+    box-shadow: 0.22vw 0.3vh rgba(156, 156, 156, 80);
+    padding: 0.5vh;
+
 }
 
 .textSize-3{
@@ -78,20 +130,6 @@
     }
 }
 
-details{
-    float: right;
-    margin-right: 2vw;
-    color: black;
-    width: 15vw;
-    cursor: pointer;
-}
-
-details > summary > img:hover{
-    animation-name: pulse;
-    animation-iteration-count: infinite;
-    animation-duration: 1s;
-}
-
 @keyframes pulse {
     0% {
      -webkit-transform:scaleX(1);
@@ -107,43 +145,12 @@ details > summary > img:hover{
     }
    }
 
-details > summary > img{
-    margin-left: 15%;
-    margin-top: 10%;
-}
-
-details[open] ul{
-    text-align: center;
-    animation-name: fadeIn;
-    animation-duration: 0.5s;
-    animation-timing-function: ease-in;
-}
-
-.topicElementsList{
-    background-color: #62718a;
-    list-style: none;
-    border-radius: 5px;
-
-    
-}
-.topicElements:hover{
-    border-radius: 10px;
-    background-color: #465061;
-}
-
-details > summary {
-    list-style: none;
-}
-
 .fadeIn{
     animation-name: fadeIn;
     animation-duration: 1s;
 }
 
-#postit{
-    width: 80%;
-    height: 80%;
-}
+
 
 
 #alien{
@@ -176,7 +183,7 @@ details > summary {
 
 .start-text{
     position: absolute;
-    top: 35vh;
+    top: 25vh;
     left: 15vw;
     right: 15vw;
     text-align: center;

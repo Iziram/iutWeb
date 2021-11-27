@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="61.150333mm"
+   height="61.487083mm"
+   viewBox="0 0 61.150333 61.487083"
+   version="1.1"
+   id="svg4075"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="red_button.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview4077"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2.096401"
+     inkscape:cx="89.916005"
+     inkscape:cy="141.90987"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g11819"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <defs
+     id="defs4072" />
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-15.40008,-16.420677)">
+    <circle
+       style="fill:#242323;fill-opacity:1;stroke-width:0.273465"
+       id="path4158-1"
+       cx="47.332596"
+       cy="-45.975246"
+       r="30.575167"
+       transform="rotate(90)" />
+    <circle
+       style="fill:#c50000;fill-opacity:1;stroke-width:0.264999"
+       id="path4158"
+       cx="46.049278"
+       cy="46.049282"
+       r="29.628605" />
+    <g
+       id="g11819"
+       transform="matrix(0.51255984,0,0,0.51255984,31.326171,22.171545)"
+       style="image-rendering:optimizeQuality">
+      <g
+         id="g11754">
+</g>
+      <g
+         id="g11756">
+</g>
+      <g
+         id="g11758">
+</g>
+      <g
+         id="g11760">
+</g>
+      <g
+         id="g11762">
+</g>
+      <g
+         id="g11764">
+</g>
+      <g
+         id="g11766">
+</g>
+      <g
+         id="g11768">
+</g>
+      <g
+         id="g11770">
+</g>
+      <g
+         id="g11772">
+</g>
+      <g
+         id="g11774">
+</g>
+      <g
+         id="g11776">
+</g>
+      <g
+         id="g11778">
+</g>
+      <g
+         id="g11780">
+</g>
+      <g
+         id="g11782">
+</g>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.0245px;line-height:1.25;font-family:'Noto Sans Arabic UI';-inkscape-font-specification:'Noto Sans Arabic UI';text-align:center;text-anchor:middle;fill:#ececec;fill-opacity:1;stroke:none;stroke-width:0.5162"
+         x="27.049593"
+         y="42.865799"
+         id="text14146"><tspan
+           sodipodi:role="line"
+           id="tspan14144"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:22.0245px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;fill:#ececec;stroke-width:0.5162"
+           x="27.049591"
+           y="42.865799">Change</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:22.0245px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;fill:#ececec;stroke-width:0.5162"
+           x="27.049593"
+           y="70.949486"
+           id="tspan14148">Topic</tspan></text>
+    </g>
+  </g>
+</svg>
